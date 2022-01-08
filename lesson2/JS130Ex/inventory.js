@@ -3,7 +3,8 @@ let item = {
     this.itemName = itemName;
     this.category = category;
     this.quantity = quantity;
-    this.skuCode = (this.itemName.slice(0,3) + this.category.slice(0,2)).toUpperCase();
+    this.skuCode = (this.itemName.replace(/\s/g,'').slice(0,3) 
+    + this.category.replace(/\s/g,'').slice(0,2)).toUpperCase();
 
     return this;
   },
